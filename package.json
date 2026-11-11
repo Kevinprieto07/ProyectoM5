@@ -1,0 +1,32 @@
+{
+  "name": "github-ai-agent",
+  "version": "1.0.0",
+  "description": "MCP Server en TypeScript que expone tools para automatizar tareas de GitHub desde un agente de IA (Antigravity).",
+  "main": "dist/server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/server.ts",
+    "test": "vitest run",
+    "lint": "tsc --noEmit",
+    "inspector": "npm run build && npx @modelcontextprotocol/inspector node dist/server.js"
+  },
+  "keywords": [],
+  "author": "Kevin Andrés Prieto Mora",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@octokit/rest": "^22.0.1",
+    "dotenv": "^18.0.10",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  }
+}
